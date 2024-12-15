@@ -52,7 +52,7 @@ qemu-system-riscv64 \
     -device virtio-blk-device,drive=hd0 \
     -drive file="$DISK_IMAGE",if=none,id=hd0,format=qcow2 \
     -device virtio-net-device,netdev=net0 \
-    -netdev user,id=net0,hostfwd=tcp::2222-:22 \
+    -netdev user,id=net0,hostfwd=tcp:127.0.0.1:2222-:22,hostfwd=tcp::2222-:22 \
     -nographic \
     -fsdev local,id=fs0,path=./shared,security_model=none \
     -device virtio-9p-device,fsdev=fs0,mount_tag=hostshare \
