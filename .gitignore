@@ -1,0 +1,9 @@
+.auto-coder/
+actions/
+output.txt
+
+.DS_Store
+*.pdf
+*.qcow2
+*.bin
+*.img
